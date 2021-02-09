@@ -2,12 +2,14 @@ import 'react-native-gesture-handler';
 import * as React from 'react';
 import {StyleSheet} from "react-native";
 import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+//import { createDrawerNavigator } from '@react-navigation/drawer';
 
 
 
 
 import AppNavigation from "./navigation/AppNavigation";
+import HomeScreen from "./screens/homeScreen";
+import DetailsScreen from "./screens/detailsScreen";
 
 //const Stack = createStackNavigator();
 //const HomeStack = createStackNavigator();
@@ -33,7 +35,7 @@ import AppNavigation from "./navigation/AppNavigation";
 //     </HomeStack.Navigator>
 //
 // );
-
+//
 // const DetailsStackScreen = ({navigation}) =>(
 //     <DetailsStack.Navigator screenOptions={{
 //         headerStyle:{
