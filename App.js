@@ -1,15 +1,85 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import {StyleSheet} from "react-native";
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
-export default function App() {
+
+
+
+import AppNavigation from "./navigation/AppNavigation";
+
+//const Stack = createStackNavigator();
+//const HomeStack = createStackNavigator();
+//const DetailsStack = createStackNavigator();
+//const Drawer = createDrawerNavigator();
+
+
+
+// const HomeStackScreen = ({navigation}) =>(
+//     <HomeStack.Navigator screenOptions={{
+//         headerStyle:{
+//             backgroundColor:'#009387',
+//         },
+//         headerTintColor:'#fff',
+//         headerTitleStyle:{
+//             fontWeight:'bold'
+//         }
+//     }}>
+//         <HomeStack.Screen name="Home" component={HomeScreen} option={{
+//             title:'Overview'
+//         }}/>
+//
+//     </HomeStack.Navigator>
+//
+// );
+
+// const DetailsStackScreen = ({navigation}) =>(
+//     <DetailsStack.Navigator screenOptions={{
+//         headerStyle:{
+//             backgroundColor:'#009387',
+//         },
+//         headerTintColor:'#fff',
+//         headerTitleStyle:{
+//             fontWeight:'bold'
+//         }
+//     }}>
+//         <DetailsStack.Screen name="Details" component={DetailsScreen} option={{
+//
+//         }}/>
+//
+//     </DetailsStack.Navigator>
+//
+// );
+
+
+
+ const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+
+      // <NavigationContainer>
+      //    {/*Rest of your app code*/}
+      //
+      //     {/*<Stack.Navigator >*/}
+      //     {/*    <Stack.Screen name="Home" component={HomeScreen} />*/}
+      //     {/*    <Stack.Screen name="Details" component={DetailsScreen} />*/}
+      //
+      //     {/*</Stack.Navigator>*/}
+      //
+      //
+      //
+      //
+      //     <Drawer.Navigator initialRouteName="Home">
+      //         <Drawer.Screen name="Home" component={HomeScreen} />
+      //         <Drawer.Screen name="Details" component={DetailsScreen} />
+      //     </Drawer.Navigator>
+      //
+      // </NavigationContainer>
+      <AppNavigation/>
   );
 }
+export default App;
+
 
 const styles = StyleSheet.create({
   container: {
@@ -18,4 +88,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
 });
+
+
+// screenOptions={{
+//     headerStyle:{
+//         backgroundColor:'#009387',
+//     },
+//     headerTintColor:'#fff',
+//         headerTitleStyle:{
+//         fontWeight: 'bold'
+//     }
+// }}
